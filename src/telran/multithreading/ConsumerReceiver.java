@@ -6,9 +6,11 @@ import java.util.concurrent.atomic.AtomicLong;
 public class ConsumerReceiver extends Thread {
     private BlockingQueue<String> messageBox;
     private static AtomicLong messagesCounter = new AtomicLong();
-	public void setMessageBox(BlockingQueue<String> messageBox) {
+	
+    public void setMessageBox(BlockingQueue<String> messageBox) {
 		this.messageBox = messageBox;
 	}
+    
     public void run() {
     	boolean running = true;
     	while(running) {
